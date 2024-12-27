@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Exploration Gear</title>
+  <style>
+    /* Basic Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+background-image: url('file:///C:/Users/Gokulanathan%20M/Downloads/39608.jpg');
+
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+      
+      color: #f0f0f0;
+    }
+
+    header {
+      background-color: #0f3460;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #e43f5a;
+    }
+
+    /* Hero Section */
+    #hero {
+      background-image: url('images/space-background.jpg');
+      background-size: cover;
+      color: #f0f0f0;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    #hero h2 {
+      font-size: 3rem;
+    }
+
+    #hero p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+
+    .button-primary {
+      background-color: #e43f5a; 
+      color: #f0f0f0;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .button-primary:hover {
+      background-color: #ff6f61;
+    }
+
+    /* Products Section */
+    #gear-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+	background-color:#2E2E2E;
+    }
+
+    .gear-item {
+      background-color: #162447;
+      border-radius: 10px;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gear-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gear-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .gear-item h2 {
+      color: #e43f5a;
+    }
+
+    .gear-item p {
+      color: #f0f0f0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0f3460;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+      color: #f0f0f0;
+    }
+
+    /* Modal Styles */
+    #product-modal,
+    #success-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    #modal-content,
+    #success-message {
+      background: #162447;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      text-align: left;
+      color: #f0f0f0;
+    }
+
+    #modal-content h2,
+    #success-message h2 {
+      color: #e43f5a;
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #e43f5a;
+      color: #f0f0f0;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #ff6f61;
+    }
+
+    .payment-button {
+      margin: 5px 5px 15px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1 align="center">ASTRO SPACE SHOP</h1>
+<h2 align="center">Welcome to Astro Space Shop</h1>
+
+
+  <!-- Header with Navigation -->
+  <header>
+    <h1>Space Exploration Gear</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#gear-list">Products</a>
+      <a href="#footer">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h2>Explore the Universe with Our Gear</h2>
+    <p>Your journey to space begins here. Discover high-quality gear for all your space adventures!</p>
+    <a href="#gear-list"><button class="button-primary">Shop Now</button></a>
+  </section>
+
+
+  <!-- Products Section -->
+  <section id="gear-list">
+    <div class="gear-item" data-index="0">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\space-suit_421632-6639.avif" alt="Spacesuit">
+      <h2>Spacesuit</h2>
+      <p>Essential for survival in space.</p>
+<button class="add-to-cart">Add to Cart</button>
+    </div>
+
+
+
+
+    <div class="gear-item" data-index="1">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\rocket thruster.jpeg" alt="Rocket Thruster">
+      <h2>Rocket Thruster</h2>
+      <p>A powerful engine to propel your spacecraft.</p>
+<button class="add-to-cart">Add to Cart</button>
+
+    </div>
+
+    <div class="gear-item" data-index="2">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\space-helmet-3Demon-scene-2021-Overview.1405.jpg" alt="Helmet">
+      <h2>Helmet</h2>
+      <p>Protective helmet for space exploration.</p>
+<button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="gear-item" data-index="3">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\600px-HR-Jetpack_covenant_(render).png" alt="Jetpack">
+      <h2>Jetpack</h2>
+      <p>Portable propulsion system for astronauts.</p>
+<button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="gear-item" data-index="4">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\dress_up_space_boots_black_hedgehogshop.webp" alt="Space Boots">
+      <h2>Space Boots</h2>
+      <p>Durable boots for walking in space environments.</p>
+<button class="add-to-cart">Add to Cart</button>
+
+    </div>
+
+    <div class="gear-item" data-index="5">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\astronaut-gloves-85.jpg" alt="Gloves">
+      <h2>Gloves</h2>
+      <p>Gloves for handling tools and space equipment.</p>
+<button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="gear-item" data-index="6">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\d-isolated-oxygen-tank-hospital-equipment-illustration-68591312.webp" alt="Oxygen Tank">
+      <h2>Oxygen Tank</h2>
+      <p>Supplies breathable oxygen during spacewalks.</p>
+<button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="gear-item" data-index="7">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\1618775f45304f39d4e14eb49e3f7af4.jpg" alt="Spacesuit Backpack">
+      <h2>Spacesuit Backpack</h2>
+      <p>Special backpack for storing essential tools.</p>
+<button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="gear-item" data-index="8">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\satellite-dish-aerials-telecommunications-tower-radio-telescope-png-favpng-EZH22gT6wGFq8cvVhLqsa7V43.jpg" alt="Satellite Dish">
+      <h2>Satellite Dish</h2>
+      <p>Essential for communication in space.</p>
+<button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="gear-item" data-index="9">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\daniel-wild-1-new-space-suit-design-for-se-sequel.jpg" alt="Space Suit">
+      <h2>Space Suit</h2>
+      <p>Full-body protection for astronauts.</p>
+<button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="gear-item" data-index="10">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\solar panel arry.jpg" alt="Solar Panel Array">
+      <h2>Solar Panel Array</h2>
+      <p>Generates energy from sunlight for space operations.</p>
+<button class="add-to-cart">Add to Cart</button>
+    </div>
+
+    <div class="gear-item" data-index="11">
+      <img src="C:\Users\Gokulanathan M\Downloads\createathon images\ispace-lunar-rover.jpg" alt="Lunar Rover">
+      <h2>Lunar Rover</h2>
+      <p>Vehicle for exploring the moon’s surface.</p>
+<button class="add-to-cart">Add to Cart</button>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="footer">
+    <p>&copy; 2024 Space Exploration Co. | Contact us at contact@spaceexploration.com</p>
+  </footer>
+
+  <!-- Order Modal -->
+  <div id="product-modal">
+    <div id="modal-content">
+      <h2>Order Space Gear</h2>
+      <p id="product-name"></p>
+      <p>Price: $<span id="product-price"></span></p>
+
+      <form id="order-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label>Payment Option</label>
+        <select name="pay opt">
+        <option value="credit">Credit Card<br>
+        <option value="debit">Debit Card<br>
+        <option value="upi">UPI
+        </select>
+
+        <label for="delivery-date">Delivery Date</label>
+        <input type="date" id="delivery-date" name="delivery-date" required>
+
+        <button type="submit">Submit Order</button>
+      </form>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Success Popup -->
+  <div id="success-popup">
+    <div id="success-message">
+      <h2>Order Successful!</h2>
+      <p>Thank you for your order! We will contact you soon.</p>
+      <button onclick="closeSuccessPopup()">Close</button>
+    </div>
+  </div>
+<h1 style="background-color:#0f3460;">
+ <p "color: gold;">
+<!-- Cart Icon with Item Count -->
+<div id="cart-icon">
+  <span>Cart</span> (<span id="cart-count">0</span> items)
+</div>
+
+<!-- Cart Content (hidden initially) -->
+<div id="cart-content" style="display: none;">
+  <ul id="cart-items-list"></ul>
+</div></p>
+</h1>
+
+
+ 
+
+  <script>
+    // Product Modal Logic
+    const gearItems = document.querySelectorAll('.gear-item');
+    const modal = document.getElementById('product-modal');
+    const productName = document.getElementById('product-name');
+    const productPrice = document.getElementById('product-price');
+    const orderForm = document.getElementById('order-form');
+    const successPopup = document.getElementById('success-popup');
+
+    const products = [
+      { name: 'Spacesuit', price: 2999 },
+      { name: 'Rocket Thruster', price: 6999 },
+      { name: 'Helmet', price: 799 },
+      { name: 'Jetpack', price: 4999 },
+      { name: 'Space Boots', price: 599 },
+      { name: 'Gloves', price: 199 },
+      { name: 'Oxygen Tank', price: 1500 },
+      { name: 'Spacesuit Backpack', price: 250 },
+      { name: 'Satellite Dish', price: 350 },
+      { name: 'Space Suit', price: 5000 },
+      { name: 'Solar Panel Array', price: 1200 },
+      { name: 'Lunar Rover', price: 12000 }
+    ];
+
+    gearItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        const product = products[index];
+        productName.textContent = product.name;
+        productPrice.textContent = product.price;
+        modal.style.display = 'flex';
+      });
+    });
+
+    // Handle order form submission
+    orderForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modal.style.display = 'none';
+      successPopup.style.display = 'flex';
+    });
+
+    // Close the modals
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    function closeSuccessPopup() {
+      successPopup.style.display = 'none';
+    }
+// Store cart items
+let cart = [];
+
+// Listen for clicks on "Add to Cart" buttons
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+addToCartButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    const product = products[index];
+    addToCart(product);
+  });
+});
+
+// Function to add a product to the cart
+function addToCart(product) {
+  cart.push(product);
+  alert(`${product.name} has been added to your cart!`);
+  updateCartDisplay();
+}
+
+// Function to update the cart display (e.g., show the number of items)
+function updateCartDisplay() {
+  const cartCount = document.getElementById('cart-count');
+  cartCount.textContent = cart.length;
+}
+
+// Optionally, you can display the cart content when a user clicks on the cart icon
+const cartIcon = document.getElementById('cart-icon');
+cartIcon.addEventListener('click', () => {
+  const cartItemsList = document.getElementById('cart-items-list');
+  cartItemsList.innerHTML = '';
+  cart.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.textContent = item.name;
+    cartItemsList.appendChild(listItem);
+  });
+});
+
+
+  </script>
+
+
+
+
+</body>
+</html>  
